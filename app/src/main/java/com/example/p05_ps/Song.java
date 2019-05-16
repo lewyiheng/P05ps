@@ -16,6 +16,22 @@ public class Song {
         this.stars = stars;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setSingers(String singers) {
+        this.singers = singers;
+    }
+
+    public void setYears(int years) {
+        this.years = years;
+    }
+
+    public void setStars(int stars) {
+        this.stars = stars;
+    }
+
     public int get_id() {
         return _id;
     }

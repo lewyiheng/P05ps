@@ -125,21 +125,16 @@ public class DBHelper extends SQLiteOpenHelper{
         db.close();
         return result;
     }
-/*
+
     public int deleteNote(int id){
         SQLiteDatabase db = this.getWritableDatabase();
         String condition = COLUMN_ID + "= ?";
         String[] args = {String.valueOf(id)};
-        int result = db.delete(TABLE_NOTE, condition, args);
+        int result = db.delete(TABLE_SONG, condition, args);
         db.close();
         return result;
     }
 
-
-
-
-
-*/
 
 
 }
