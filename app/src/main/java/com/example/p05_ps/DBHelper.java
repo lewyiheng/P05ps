@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 
 public class DBHelper extends SQLiteOpenHelper{
 
@@ -75,7 +77,7 @@ public class DBHelper extends SQLiteOpenHelper{
                 int year = cursor.getInt(3);
                 int star = cursor.getInt(4);
                 Song toAdd = new Song(id, title, singer, year, star);
-                Songs.add(toAdd);
+                songs.add(toAdd);
             } while (cursor.moveToNext());
         }
         cursor.close();
