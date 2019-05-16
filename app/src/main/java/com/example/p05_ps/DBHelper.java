@@ -115,7 +115,10 @@ public class DBHelper extends SQLiteOpenHelper{
     public int updateNote(Song data){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        /* values.put(); */
+        values.put(COLUMN_SINGERS, data.getSingers());
+        values.put(COLUMN_STARS, data.getStars());
+        values.put(COLUMN_TITLE, data.getTitle());
+        values.put(COLUMN_YEAR, data.getYears());
         String condition = COLUMN_ID + "= ?";
         String[] args = {String.valueOf(data.get_id())};
         int result = db.update(TABLE_SONG, values, condition, args);
